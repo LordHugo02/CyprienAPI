@@ -1,7 +1,7 @@
 require('dotenv').config()
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User } from "./entity/User"
+import { AccessLog } from "./entity"
 
 export const AppDataSource = new DataSource({
     type: "mariadb",
@@ -12,7 +12,7 @@ export const AppDataSource = new DataSource({
     database: process.env.DB_NAME,
     synchronize: true,
     logging: false,
-    entities: [User],
+    entities: [AccessLog],
     migrations: [],
     subscribers: [],
 })
