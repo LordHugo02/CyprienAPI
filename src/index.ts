@@ -1,23 +1,33 @@
 import { AppDataSource } from "./data-source"
-// import { User } from "./entity/AccessLog"
+import { RightsRef } from "./entity"
 
 AppDataSource.initialize()
-// .then(async () => {
-//     console.log("init");
+.then(async () => { 
     
+    // ===== Creation Basic Rights ============================================================================================
+    
+    // const baseRight1 = new RightsRef()
+    // const baseRight2 = new RightsRef()
+    // const baseRight3 = new RightsRef()
 
-//     console.log("Inserting a new user into the database...")
-//     const user = new User()
-//     user.firstName = "Timber"
-//     user.lastName = "Saw"
-//     user.age = 25
-//     await AppDataSource.manager.save(user)
-//     console.log("Saved a new user with id: " + user.id)
+    // baseRight1.name = "Voir"
+    // baseRight1.slug = "read"
+    // baseRight1.rate = 1
 
-//     console.log("Loading users from the database...")
-//     const users = await AppDataSource.manager.find(User)
-//     console.log("Loaded users: ", users)
+    // baseRight2.name = "Modifier"
+    // baseRight2.slug = "edit"
+    // baseRight2.rate = 2
 
-//     console.log("Here you can setup and run express / fastify / any other framework.")
+    // baseRight3.name = "Ajouter / Supprimer"
+    // baseRight3.slug = "create-delete"
+    // baseRight3.rate = 4
+    
+    // await AppDataSource.manager.save(baseRight1)
+    // await AppDataSource.manager.save(baseRight2)
+    // await AppDataSource.manager.save(baseRight3)
+    
+    // ===== ==================================================================================================================
 
-// }).catch(error => console.log(error))
+    //     console.log("Here you can setup and run express / fastify / any other framework.")
+
+}).catch(error => console.log(error))

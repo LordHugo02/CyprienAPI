@@ -8,7 +8,6 @@ export class AccessLog {
 
     @Column()
     identifier: string
-
     @Column()
     password: string
 
