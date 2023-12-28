@@ -1,3 +1,4 @@
+console.clear()
 import { AppDataSource } from "./data-source"
 import { RightsRef } from "./entity"
 
