@@ -1,4 +1,4 @@
-import { Entity, Column, ManyToOne, PrimaryColumn } from "typeorm"
+import { Entity, ManyToOne, PrimaryColumn } from "typeorm"
 import { Subscription } from "./Subscription"
 import { SubscriptionRights } from "./SubscriptionRights"
 
