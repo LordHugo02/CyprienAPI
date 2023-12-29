@@ -15,6 +15,6 @@ export class Subscription {
     price: number
 
     @Column()
-    can_subscribe: boolean
+    can_subscribe: boolean = false
 
 }

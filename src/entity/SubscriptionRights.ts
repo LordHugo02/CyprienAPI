@@ -13,7 +13,4 @@ export class SubscriptionRights {
     @Column()
     description: string
 
-    @Column()
-    active: number
-
 }

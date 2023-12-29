@@ -1,6 +1,10 @@
-console.clear()
+// console.clear()
 import { AppDataSource } from "./data-source"
-import { RightsRef } from "./entity"
+import { RightsRef, Subscription, SubscriptionRights, SubscriptionRightsLink } from "./entity"
+
+async function save(item){
+    await AppDataSource.manager.save(item)
+}
 
 AppDataSource.initialize()
 .then(async () => { 
@@ -28,6 +32,29 @@ AppDataSource.initialize()
     // await AppDataSource.manager.save(baseRight3)
     
     // ===== ==================================================================================================================
+
+    // ===== Test des liens ===================================================================================================
+
+    // const sub = new Subscription()
+    // sub.duration = 1
+    // sub.name = "Test"
+    // sub.price = 12.99
+    // await save(sub)
+    
+    // const right = new SubscriptionRights()
+    // right.description = "The description"
+    // right.name = "The Name"
+    // right.slug = "name"
+    // await save(right)
+
+    // const link = new SubscriptionRightsLink()
+    // link.content = "OK"
+    // link.right = right
+    // link.subscription = sub
+    // await save(link)
+    
+    // console.log(link);
+    
 
     //     console.log("Here you can setup and run express / fastify / any other framework.")
 
