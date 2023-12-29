@@ -27,9 +27,9 @@ AppDataSource.initialize()
     // baseRight3.slug = "create-delete"
     // baseRight3.rate = 4
     
-    // await AppDataSource.manager.save(baseRight1)
-    // await AppDataSource.manager.save(baseRight2)
-    // await AppDataSource.manager.save(baseRight3)
+    // save(baseRight1)
+    // save(baseRight2)
+    // save(baseRight3)
     
     // ===== ==================================================================================================================
 
@@ -55,6 +55,7 @@ AppDataSource.initialize()
     
     // console.log(link);
     
+    // ===== ==================================================================================================================
 
     //     console.log("Here you can setup and run express / fastify / any other framework.")
 

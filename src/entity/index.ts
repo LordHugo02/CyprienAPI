@@ -1,4 +1,5 @@
 import { AccessLog } from "./AccessLog"
+import { User } from "./User"
 import { RightsRef } from "./RightsRef"
 import { RightsBase } from "./RightsBase"
 import { Subscription } from "./Subscription"
@@ -11,5 +12,6 @@ export {
     RightsBase,
     Subscription,
     SubscriptionRights,
-    SubscriptionRightsLink
+    SubscriptionRightsLink,
+    User
 }
