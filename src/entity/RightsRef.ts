@@ -1,5 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
+// Rights for subscription
+
 @Entity()
 export class RightsRef {
 
