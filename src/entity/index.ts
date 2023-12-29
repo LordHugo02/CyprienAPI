@@ -3,6 +3,7 @@ import { User } from "./User"
 import { UserGroupLink } from "./UserGroupLink"
 import { Team } from "./Team"
 import { Group } from "./Group"
+import { RightGroupLink } from "./RightGroupLink"
 import { RightsRef } from "./RightsRef"
 import { RightsBase } from "./RightsBase"
 import { Subscription } from "./Subscription"
@@ -19,5 +20,6 @@ export {
     User,
     Team,
     Group,
-    UserGroupLink
+    UserGroupLink,
+    RightGroupLink
 }

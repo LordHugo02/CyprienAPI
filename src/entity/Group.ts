@@ -1,6 +1,8 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm"
 import { Team } from "./Team"
 
+// Groups for Users
+
 @Entity()
 export class Group {
 
