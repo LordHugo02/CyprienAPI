@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm"
 import { User } from "./User"
+import * as Common from "../common"
 
 @Entity()
 export class Team {
@@ -9,8 +10,8 @@ export class Team {
 
     @Column()
     name: string
-    @PrimaryGeneratedColumn("uuid")
-    token: string
+    @Column()
+    token: string = Common.generateToken()
 
     @ManyToOne(() => User, user => user.id)
     user: User
