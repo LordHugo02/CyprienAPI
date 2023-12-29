@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from "typeorm"
+import { User } from "./User"
 
 @Entity()
 export class Team {
@@ -10,5 +11,8 @@ export class Team {
     name: string
     @PrimaryGeneratedColumn("uuid")
     token: string
+
+    @ManyToOne(() => User, user => user.id)
+    user: User
 
 }
