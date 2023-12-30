@@ -3,6 +3,7 @@ import { User } from "./User"
 import { UserGroupLink } from "./UserGroupLink"
 import { Team } from "./Team"
 import { Group } from "./Group"
+import { Family } from "./Family"
 import { RightGroupLink } from "./RightGroupLink"
 import { RightsRef } from "./RightsRef"
 import { RightsBase } from "./RightsBase"
@@ -21,5 +22,6 @@ export {
     Team,
     Group,
     UserGroupLink,
-    RightGroupLink
+    RightGroupLink,
+    Family
 }

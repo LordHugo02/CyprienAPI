@@ -1,7 +1,7 @@
 require('dotenv').config()
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { AccessLog, RightsRef, SubscriptionRights, RightsBase, Subscription, SubscriptionRightsLink, User, Team, Group, UserGroupLink, RightGroupLink } from "./entity"
+import { AccessLog, RightsRef, SubscriptionRights, RightsBase, Subscription, SubscriptionRightsLink, User, Team, Group, UserGroupLink, RightGroupLink, Family } from "./entity"
 
 export const AppDataSource = new DataSource({
     type: "mariadb",
@@ -23,7 +23,8 @@ export const AppDataSource = new DataSource({
         Team,
         Group,
         UserGroupLink,
-        RightGroupLink
+        RightGroupLink,
+        Family
     ],
     migrations: [],
     subscribers: [],
