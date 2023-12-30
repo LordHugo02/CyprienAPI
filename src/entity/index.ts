@@ -5,6 +5,7 @@ import { Team } from "./Team"
 import { Group } from "./Group"
 import { Family } from "./Family"
 import { Storage } from "./Storage"
+import { Supplier } from "./Supplier"
 import { Unit } from "./Unit"
 import { Use } from "./Use"
 import { Vat } from "./Vat"
@@ -31,5 +32,6 @@ export {
     Use,
     Storage,
     Unit,
-    Vat
+    Vat,
+    Supplier
 }
