@@ -5,6 +5,7 @@ import { Team } from "./Team"
 import { Group } from "./Group"
 import { Family } from "./Family"
 import { Storage } from "./Storage"
+import { Unit } from "./Unit"
 import { Use } from "./Use"
 import { RightGroupLink } from "./RightGroupLink"
 import { RightsRef } from "./RightsRef"
@@ -27,5 +28,6 @@ export {
     RightGroupLink,
     Family,
     Use,
-    Storage
+    Storage,
+    Unit
 }
