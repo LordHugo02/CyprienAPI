@@ -7,6 +7,7 @@ import { Family } from "./Family"
 import { Storage } from "./Storage"
 import { Unit } from "./Unit"
 import { Use } from "./Use"
+import { Vat } from "./Vat"
 import { RightGroupLink } from "./RightGroupLink"
 import { RightsRef } from "./RightsRef"
 import { RightsBase } from "./RightsBase"
@@ -29,5 +30,6 @@ export {
     Family,
     Use,
     Storage,
-    Unit
+    Unit,
+    Vat
 }
