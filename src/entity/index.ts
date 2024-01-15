@@ -5,6 +5,7 @@ import { Team } from "./Team"
 import { Unit } from "./Unit"
 import { Group } from "./Group"
 import { Family } from "./Family"
+import { Income } from "./Income"
 import { Storage } from "./Storage"
 import { Product } from "./Product"
 import { History } from "./History"
@@ -27,6 +28,7 @@ export {
     Team,
     Group,
     Family,
+    Income,
     Storage,
     Product,
     History,
