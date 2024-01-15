@@ -7,6 +7,7 @@ import { Group } from "./Group"
 import { Family } from "./Family"
 import { Storage } from "./Storage"
 import { Product } from "./Product"
+import { History } from "./History"
 import { Supplier } from "./Supplier"
 import { AccessLog } from "./AccessLog"
 import { RightsRef } from "./RightsRef"
@@ -19,23 +20,24 @@ import { SubscriptionRights } from "./SubscriptionRights"
 import { SubscriptionRightsLink } from "./SubscriptionRightsLink"
 
 export {
+    Vat,
+    Use,
+    Unit,
+    User,
+    Team,
+    Group,
+    Family,
+    Storage,
+    Product,
+    History,
+    Supplier,
     AccessLog,
     RightsRef,
     RightsBase,
     Subscription,
-    SubscriptionRights,
-    SubscriptionRightsLink,
-    User,
-    Team,
-    Group,
+    ProdSupplier,
     UserGroupLink,
     RightGroupLink,
-    Family,
-    Use,
-    Storage,
-    Unit,
-    Vat,
-    Supplier,
-    Product,
-    ProdSupplier
+    SubscriptionRights,
+    SubscriptionRightsLink,
 }
