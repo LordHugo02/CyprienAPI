@@ -7,6 +7,7 @@ import { Group } from "./Group"
 import { Family } from "./Family"
 import { Income } from "./Income"
 import { Storage } from "./Storage"
+import { Outcome } from "./Outcome"
 import { Product } from "./Product"
 import { History } from "./History"
 import { Supplier } from "./Supplier"
@@ -32,6 +33,7 @@ export {
     Storage,
     Product,
     History,
+    Outcome,
     Supplier,
     AccessLog,
     RightsRef,
