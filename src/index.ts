@@ -8,50 +8,199 @@ async function save(item){
 
 AppDataSource.initialize()
 .then(async () => { 
-    
     // ===== Creation Basic Rights ============================================================================================
     
-    // const baseRight1 = new RightsRef()
-    // const baseRight2 = new RightsRef()
-    // const baseRight3 = new RightsRef()
+    const baseRights = [
+        {
+            "name": "Voir",
+            "slug": "read",
+            "rate": 1
+        },
+        {
+            "name": "Modifier",
+            "slug": "edit",
+            "rate": 2
+        },
+        {
+            "name": "Supprimer",
+            "slug": "delete",
+            "rate": 4
+        }
+    ]
 
-    // baseRight1.name = "Voir"
-    // baseRight1.slug = "read"
-    // baseRight1.rate = 1
-
-    // baseRight2.name = "Modifier"
-    // baseRight2.slug = "edit"
-    // baseRight2.rate = 2
-
-    // baseRight3.name = "Ajouter / Supprimer"
-    // baseRight3.slug = "create-delete"
-    // baseRight3.rate = 4
-    
-    // save(baseRight1)
-    // save(baseRight2)
-    // save(baseRight3)
+    baseRights.forEach(async (item) => {
+        const right = new RightsRef()
+        right.name = item.name
+        right.slug = item.slug
+        right.rate = item.rate
+        await save(right)
+    });
     
     // ===== ==================================================================================================================
 
-    // ===== Test des liens ===================================================================================================
+    // ===== Mock Data ========================================================================================================
+    // ===== Subscriptions ====================================================
+    const baseSubs = [
+        {
+            "name":"solo",
+            "duration":0,
+            "price":0
+        },
+        {
+            "name":"Team",
+            "duration":1,
+            "price":4.99
+        },
+        {
+            "name":"Business",
+            "duration":1,
+            "price":12.99
+        },
+        {
+            "name":"Company",
+            "duration":1,
+            "price":24.99
+        }
+    ]
+    let subs = []
+    baseSubs.forEach(async (item) => {
+        const sub = new Subscription()
+        sub.duration = item.duration
+        sub.name = item.name
+        sub.price = item.price
+        subs.push(sub)
+        await save(sub)
+    });
 
-    // const sub = new Subscription()
-    // sub.duration = 1
-    // sub.name = "Test"
-    // sub.price = 12.99
-    // await save(sub)
+    // ===== Rights ===========================================================
     
-    // const right = new SubscriptionRights()
-    // right.description = "The description"
-    // right.name = "The Name"
-    // right.slug = "name"
-    // await save(right)
+    const baseSubRights = [
+        {
+            "description": "Permet plusieurs utilisateurs pour un même magasin",
+            "name": "Travail en équipe",
+            "slug": "team"
+        },
+        {
+            "description": "Nombre de groupes possible à créer pour un même magasin",
+            "name": "Nombre de groupes",
+            "slug": "nb_groups"
 
-    // const link = new SubscriptionRightsLink()
-    // link.content = "OK"
-    // link.right = right
-    // link.subscription = sub
-    // await save(link)
+        },
+        {
+            "description": "Possiblité de donner des droits différent pour chaque groupe",
+            "name": "Droits différent / Groupe",
+            "slug": "groups_rights"
+        },
+        {
+            "description": "Possiblité de donner des droits différent pour chaque utilisateur",
+            "name": "Droits différent / Utilisateur",
+            "slug": "users_rights"
+        }
+    ]
+    let rights = []
+    
+    baseSubRights.forEach(async (item) => {
+        const right = new SubscriptionRights()
+        right.description = item.description
+        right.name = item.name
+        right.slug = item.slug
+        rights.push(right)
+        await save(right)
+    });
+
+    // ===== Rights Link ======================================================
+
+    const baseLinks = [
+        {
+            "sub":subs[0],
+            "right": rights[0],
+            "content": "false"
+        },
+        {
+            "sub":subs[0],
+            "right": rights[1],
+            "content": "0"
+        },
+        {
+            "sub":subs[0],
+            "right": rights[2],
+            "content": "false"
+        },
+        {
+            "sub":subs[0],
+            "right": rights[3],
+            "content": "false"
+        },
+        {
+            "sub":subs[1],
+            "right": rights[0],
+            "content": "true"
+        },
+        {
+            "sub":subs[1],
+            "right": rights[1],
+            "content": "1"
+        },
+        {
+            "sub":subs[1],
+            "right": rights[2],
+            "content": "false"
+        },
+        {
+            "sub":subs[1],
+            "right": rights[3],
+            "content": "false"
+        },
+        {
+            "sub":subs[2],
+            "right": rights[0],
+            "content": "true"
+        },
+        {
+            "sub":subs[2],
+            "right": rights[1],
+            "content": "5"
+        },
+        {
+            "sub":subs[2],
+            "right": rights[2],
+            "content": "true"
+        },
+        {
+            "sub":subs[2],
+            "right": rights[3],
+            "content": "false"
+        },
+        {
+            "sub":subs[3],
+            "right": rights[0],
+            "content": "true"
+        },
+        {
+            "sub":subs[3],
+            "right": rights[1],
+            "content": "999"
+        },
+        {
+            "sub":subs[3],
+            "right": rights[2],
+            "content": "true"
+        },
+        {
+            "sub":subs[3],
+            "right": rights[3],
+            "content": "true"
+        }
+    ]
+
+    baseLinks.forEach(async (item) => {
+        const link = new SubscriptionRightsLink()
+        link.content = item.content
+        link.right = item.right
+        link.subscription = item.sub
+        await save(link)
+    });
+
     
     // console.log(link);
     

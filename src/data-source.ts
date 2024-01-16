@@ -38,4 +38,5 @@ export const AppDataSource = new DataSource({
     ],
     migrations: [],
     subscribers: [],
+    dropSchema: true
 })
