@@ -26,9 +26,6 @@
 
 name: SonarQube analysis
 
-environment:
-  name: ProjetAPI
-
 on:
   push:
     branches: [ "main" ]
@@ -42,6 +39,8 @@ permissions:
 jobs:
   Analysis:
     runs-on: ubuntu-latest
+    environment:
+      name: ProjetAPI
 
     steps:
       - name: Analyze with SonarQube
