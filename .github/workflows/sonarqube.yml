@@ -26,6 +26,9 @@
 
 name: SonarQube analysis
 
+environment:
+  name: ProjetAPI
+
 on:
   push:
     branches: [ "main" ]
